@@ -26,7 +26,7 @@ value = 99
 table[row].insert(column, value)
 
 # Imprimiendo mensaje
-print("--- Despues de la insercion del elemento ---")
+print("--- Despues de la insercion del elemento v---")
 print_table(table) #DRY
 
 # Insertando una fila completa
