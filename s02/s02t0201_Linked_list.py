@@ -1,0 +1,43 @@
+#Creando la clase Nodo
+class Node:
+    #Constructor
+    def _init_(self, data=None):
+        self.data = data
+        self.next = None
+    def iter(self):
+        current = self
+        while current:
+            value = current.data
+            current = current.next
+            yield value  
+
+# Creando una funcion principal
+def main():
+    # Codigo de prueba
+
+    # Testear nuestra clase nodo
+    node_01 = Node("eggs")
+    node_02 = Node("ham")
+    node_03 = Node("bacon")
+
+    # print("🔗 NODES 🔗")
+    # print(f"Node 01: D:{node_01.data} - N:{node_01.next}")
+    # print(f"Node 02: D:{node_02.data} - N:{node_02.next}")
+    # print(f"Node 03: D:{node_03.data} - N:{node_03.next}")
+
+    # Enlazando nodos
+    node_01.next = node_02
+    node_02.next = node_03
+
+    # print("🔗 NODES ENLAZADOS 🔗")
+    # print(f"Node 01: D:{node_01.data} - N:{node_01.next}")
+    # print(f"Node 02: D:{node_02.data} - N:{node_02.next}")
+    # print(f"Node 03: D:{node_03.data} - N:{node_03.next}")
+
+    # List Transversal (Recorrido de la lista)
+    for node_value in node_01.iter():
+        print(node_value)
+
+# Invocando a main
+if _name_ == "_name_":
+    main()
